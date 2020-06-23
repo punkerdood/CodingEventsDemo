@@ -1,8 +1,11 @@
 ﻿<h1>Coding Events</h1>
 
+<p>
+    <a asp-controller="Events" asp-action="Next">Add Event and Deets</a>
+</p>
 <ul>
-    @foreach (string meeting in ViewBag.events)
+    @foreach (KeyValuePair<string, string> NewEvent in ViewBag.events)
     {
-        <li>@meeting</li>
+        <li>@NewEvent</li>
     }
 </ul>
